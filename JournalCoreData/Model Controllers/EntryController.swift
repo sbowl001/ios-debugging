@@ -93,8 +93,7 @@ class EntryController {
             completion(nil)
         }.resume()
     }
-    
-    func fetchEntriesFromServer(completion: @escaping ((Error?) -> Void) = { _ in }) {
+        func fetchEntriesFromServer(completion: @escaping ((Error?) -> Void) = { _ in }) {
         
         let requestURL = baseURL.appendingPathExtension("json")
         
