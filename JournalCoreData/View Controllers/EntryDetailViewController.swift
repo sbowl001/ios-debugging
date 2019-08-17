@@ -41,11 +41,11 @@ class EntryDetailViewController: UIViewController {
     }
     
     private func updateViews() {
-        guard let entry = entry else {
+        guard let entry = entry, isViewLoaded else {
                 title = "Create Entry"
                 return
         }
-        
+//        loadViewIfNeeded()  can also do this 
         title = entry.title
         titleTextField.text = entry.title
         bodyTextView.text = entry.bodyText
